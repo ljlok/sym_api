@@ -1,0 +1,11 @@
+<parameters>
+    <parameter key="acme_bhi.user.handler.class">Acme\BhiBundle\Handler\UserHandler</parameter>
+    <parameter key="acme_bhi.user.class">Acme\BhiBundle\Entity\User</parameter>
+</parameters>
+
+<services>
+    <service id="acme_bhi.user.handler" class="%acme_bhi.user.handler.class%">
+        <argument type="service" id="doctrine.orm.entity_manager" />
+        <argument>%acme_bhi.user.class%</argument>
+    </service>
+</services>

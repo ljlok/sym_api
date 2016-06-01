@@ -1,0 +1,21 @@
+# src/Acme/BlogBundle/Resources/config/validation.yml
+Acme\BhiBundle\Entity\User:
+    properties:
+        username:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                min: 4
+                max: 50
+                minMessage: "Your username must be at least {{ limit }} characters length"
+                maxMessage: "Your username cannot be longer than {{ limit }} characters length"
+
+        password:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                min: 6
+                max: 50
+                minMessage: "Your password must be at least {{ limit }} characters length"
+                maxMessage: "Your password name cannot be longer than {{ limit }} characters length"
+

@@ -1,0 +1,5 @@
+acme_bhi_User:
+    type: rest
+    prefix: /v1
+    resource: "Acme\BhiBundle\Controller\UserController"
+    name_prefix: api_1_ # naming collision
